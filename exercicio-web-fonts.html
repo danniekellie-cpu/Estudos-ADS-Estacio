@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Usando Web Fonts</title>
+    <style>
+        /* O @font-face avisa ao navegador onde buscar o arquivo da fonte */
+        @font-face {
+            font-family: "opensans";
+            src: url("fonts/OpenSans-Regular.woff2") format("woff2");
+        }
+
+        /* Aplicando a fonte carregada ao primeiro parágrafo */
+        #primeiro-container {
+            font-family: "opensans", sans-serif;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Segundo parágrafo com uma fonte padrão para você comparar */
+        #segundo-container {
+            font-family: Arial, sans-serif;
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Usando Web Fonts (Tema 4)</h1>
+
+    <p id="primeiro-container">
+        Este parágrafo está usando a fonte Open Sans, que foi carregada 
+        através do comando @font-face no CSS.
+    </p>
+
+    <p id="segundo-container">
+        Já este parágrafo usa a fonte Arial, que é uma fonte padrão 
+        que já existe em quase todos os computadores.
+    </p>
+
+</body>
+</html>
