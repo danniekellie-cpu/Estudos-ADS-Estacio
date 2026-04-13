@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamento elementos com CSS</title>
+    <style type="text/css">
+        /* Configuração da caixa principal */
+        div#main {
+            margin: auto;
+            width: 400px;
+            background-color: orange;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+
+        /* Estilo da imagem com borda amarela */
+        .img {
+            width: 394px;
+            height: 200px;
+            border: 3px inset yellow;
+        }
+
+        /* Caixa de texto azul com scroll automático e borda tracejada */
+        #container-texto {
+            width: 382px;
+            background-color: blue;
+            height: 150px;
+            overflow: auto;
+            margin-top: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border: 4px dashed grey;
+            color: white; /* Adicionei branco para você conseguir ler no fundo azul */
+        }
+
+        /* Estilo para destacar partes do texto */
+        .texto {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main">
+        <h1>Visão Final da Página</h1>
+        
+        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Boxmodell-detail.png/220px-Boxmodell-detail.png" alt="Box Model">
+
+        <div id="container-texto">
+            <p>
+                <span class="texto">Lorem ipsum dolor sit amet,</span> 
+                consectetur adipiscing elit. In euismod nibh sit amet justo cursus, 
+                eget posuere arcu pharetra.
+            </p>
+            <p>
+                Donec vestibulum, lectus non consectetur condimentum, ex purus 
+                luctus lectus, at lacinia augue sem euismod diam. 
+                <span class="texto">Aliquam aliquam accumsan varius.</span>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
