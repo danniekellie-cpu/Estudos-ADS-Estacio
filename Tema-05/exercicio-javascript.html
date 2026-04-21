@@ -1,37 +1,27 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <title>Exercício Tema 5 - JavaScript</title>
+     <meta charset="utf-8">
+     <title>Praticando Javascript - Exercício 1</title>
 </head>
 <body>
-    <h1>Prática de JavaScript - Tema 5</h1>
-    
-    <div id="exibe_resultado">Resultado Final: </div>
+     <script type="text/javascript">
+          // 1. Pede os números e usa o parseInt para garantir que sejam números inteiros
+          var numero1 = parseInt(prompt("Insira o primeiro número inteiro positivo: "));
+          var numero2 = parseInt(prompt("Insira o segundo número inteiro positivo: "));
 
-    <script type="text/javascript">
-        // Função de divisão (Lógica do roteiro)
-        function dividir(numero1, numero2) {
-            return numero1 / numero2;
-        }
+          // 2. Chama a função para dividir
+          var resultadoDivisao = divida(numero1, numero2);
 
-        // Entrada de dados
-        var n1 = prompt("Insira o primeiro número:");
-        var n2 = prompt("Insira o segundo número:");
+          // 3. Exibe o resultado na caixa de diálogo (alert)
+          alert('O resultado da divisão é igual a: ' + resultadoDivisao);
 
-        // Verificação e exibição do resultado
-        if (n2 != 0) {
-            var resultadoCalculado = dividir(n1, n2);
-            
-            // Exibe o alerta
-            alert("O resultado da divisão é igual a: " + resultadoCalculado);
-
-            // Manipulação do DOM: localiza a div e escreve nela
-            var divLocal = document.getElementById('exibe_resultado');
-            divLocal.innerHTML += "<strong>" + resultadoCalculado + "</strong>";
-        } else {
-            alert("Erro: Divisão por zero não é permitida.");
-        }
-    </script>
+          // 4. Função que realiza a divisão
+          function divida(n1, n2) {
+               var resultado = 0;
+               resultado = n1 / n2;
+               return resultado;
+          }
+     </script>
 </body>
 </html>
