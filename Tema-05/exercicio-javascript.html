@@ -5,23 +5,21 @@
      <title>Praticando Javascript - Exercício 1</title>
 </head>
 <body>
-     <script type="text/javascript">
-          // 1. Pede os números e usa o parseInt para garantir que sejam números inteiros
-          var numero1 = parseInt(prompt("Insira o primeiro número inteiro positivo: "));
-          var numero2 = parseInt(prompt("Insira o segundo número inteiro positivo: "));
+    <script type="text/javascript">
+        // A função precisa estar aqui para ser chamada depois
+        function divida(n1, n2){
+            var resultado = n1 / n2;
+            return resultado;
+        }
 
-          // 2. Chama a função para dividir
-          var resultadoDivisao = divida(numero1, numero2);
+        // CORREÇÃO: Usamos Number() para garantir que o prompt vire número
+        var numero1 = Number(prompt("Insira o primeiro número: "));
+        var numero2 = Number(prompt("Insira o segundo número: "));
 
-          // 3. Exibe o resultado na caixa de diálogo (alert)
-          alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+        // Agora a divisão vai funcionar
+        var resultadoDivisao = divida(numero1, numero2);
 
-          // 4. Função que realiza a divisão
-          function divida(n1, n2) {
-               var resultado = 0;
-               resultado = n1 / n2;
-               return resultado;
-          }
-     </script>
+        alert('O resultado da divisão é igual a: ' + resultadoDivisao);
+    </script>
 </body>
 </html>
